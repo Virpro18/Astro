@@ -1,0 +1,60 @@
+---
+import styles from "../../styles/main.module.css";
+import Card from "./Card.astro";
+import type { Props } from "./Card.astro";
+// import { createClient } from "@supabase/supabase-js";
+// const url = import.meta.env.SUPABASE_MAIN_URL;
+// const key = import.meta.env.SUPABASE_API_KEY;
+// const supabase = createClient(url,key)
+// async function testing() {
+//     const data = await supabase.from("PrList").select()
+//     console.log(data)
+// }
+// testing()
+
+type projectData = Props[];
+
+const projects: projectData = [
+  {
+    title: "Home Work List",
+    description: "remind you of your homework",
+    url: "kosong",
+    image: "test",
+    tech: ["React", "NextJS"],
+  },
+  {
+    title: "To do List",
+    description: "remind you of your to do list",
+    url: "kosong",
+    image: "",
+    tech: ["NextJS"],
+  },
+  {
+    title: "Kasir",
+    description: "Apilikasi kasir untuk HUT SMPN 31",
+    url: "kosong",
+    image: "",
+    tech: ["Astro",],
+  },
+];
+---
+
+<main class={styles.main}>
+  <!-- <img src="" alt="" /> -->
+  <h1>List Project</h1>
+  <div class={styles.container}>
+    {
+      projects.map((project) => {
+        return (
+          <Card
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            tech={project.tech}
+          />
+        );
+      })
+    }
+  </div>
+</main>

@@ -1,0 +1,21 @@
+---
+import Header from "../components/client/Header"
+import "../styles/Main.css"
+const CurrentURL = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Header link={["/","/about","/docs"]} title={["Home","About","Docs"]} currentLink={CurrentURL} client:idle/>
+    <slot>
+        <h1>MALAS</h1>
+    </slot>
+</body>
+</html>

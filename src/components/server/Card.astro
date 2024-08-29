@@ -1,0 +1,56 @@
+---
+import styles from "../../styles/card.module.css";
+import validator from "validator";
+
+type techData = "React" | "NextJS" | "Astro" | "Tailwind";
+
+export interface Props {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  tech?: techData[];
+}
+
+const props = Astro.props;
+console.log({props});
+
+function linkValidate(link) {
+  if (validator.isURL(link)) {
+    return link;
+  } else if (props.tech) {
+    switch (props.tech[0]) {
+      case "React":
+        return "/react-logo1.svg";
+      case "NextJS":
+        return "/next-logo.svg";
+      case "Astro":
+        return "/favicon.svg";
+      case "Tailwind":
+        return "URL_ADDRESS";
+    }
+  } else {
+    return "/react-logo1.svg";
+  }
+}
+---
+
+<div class={styles.card}>
+  <h3 class="card-title">{props.title}</h3>
+  <div class={styles.card_body}>
+    <img src={linkValidate(props.image)} alt="" class={styles.img} />
+    <p class="card-text">{props.description}</p>
+    <a href={props.url} class="card-link"><button>{props.url}</button></a>
+    {
+      props.tech ? (
+        <p class="card-text">
+          {props.tech.map((tech) => {
+            return tech + ",";
+          })}
+        </p>
+      ) : (
+        ""
+      )
+    }
+  </div>
+</div>

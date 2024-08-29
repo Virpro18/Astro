@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.card {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #27923e;
+}
+
+.card * {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.card:hover {
+    background-color: aliceblue;
+
+    img {
+        transform: rotate3d(1, 1, 0, 30deg);
+        filter: invert(.4) sepia(1) saturate(5) hue-rotate(180deg);
+    }
+}
+
+.img {
+    transition: all .3s ease-out;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.card_body {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+.card_body * {
+    font-weight: 450;
+}

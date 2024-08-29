@@ -1,0 +1,59 @@
+.header {
+    background: linear-gradient(90deg,#222,#333324);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.uint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 3em;
+    list-style: none;
+}
+
+.lint {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Pastikan tinggi elemen li mengikuti isi atau setel secara spesifik */
+    border-radius: 10px;
+}
+
+.lint:hover {
+    color: aqua;
+    background-color: #e8ff7f;
+}
+
+.link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 15px; /* Sesuaikan padding sesuai kebutuhan */
+    width: 100%; /* Mengisi seluruh lebar li */
+    height: 100%; /* Mengisi seluruh tinggi li */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.here {
+    color: green;
+}
+.here:hover {
+    color: #ffe600;
+}
+
+.lint,.here {
+    transition: all 0.3s ease-in-out;
+}
