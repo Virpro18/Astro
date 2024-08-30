@@ -1,7 +1,7 @@
 ---
 import styles from "../../styles/main.module.css";
 import Card from "./Card.astro";
-import type { Props } from "./Card.astro";
+import type { ex } from "./Card.astro";
 // import { createClient } from "@supabase/supabase-js";
 // const url = import.meta.env.SUPABASE_MAIN_URL;
 // const key = import.meta.env.SUPABASE_API_KEY;
@@ -12,13 +12,13 @@ import type { Props } from "./Card.astro";
 // }
 // testing()
 
-type projectData = Props[];
+type projectData = ex[];
 
-const projects: projectData = [
+export const projects: projectData = [
   {
     title: "Home Work List",
     description: "remind you of your homework",
-    url: "kosong",
+    url: "homework",
     image: "test",
     tech: ["React", "NextJS"],
   },
@@ -32,7 +32,7 @@ const projects: projectData = [
   {
     title: "Kasir",
     description: "Apilikasi kasir untuk HUT SMPN 31",
-    url: "kosong",
+    url: "",
     image: "",
     tech: ["Astro",],
   },

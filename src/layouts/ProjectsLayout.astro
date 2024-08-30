@@ -1,0 +1,22 @@
+---
+import ProjectHeader from "../components/client/ProjectsHeader"
+import "../styles/Main.css"
+const CurrentURL = Astro.url.pathname;
+const title = CurrentURL.split("/")[2].toUpperCase();
+console.log(title)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ProjectHeader title={title}/>
+    <slot>
+        <h1>malas</h1>
+    </slot>
+</body>
+</html>

@@ -4,13 +4,14 @@ import validator from "validator";
 
 type techData = "React" | "NextJS" | "Astro" | "Tailwind";
 
-export interface Props {
+interface Props {
   title: string;
   description: string;
   url: string;
   image?: string;
   tech?: techData[];
 }
+export interface ex extends Props {}
 
 const props = Astro.props;
 console.log({props});
@@ -40,7 +41,7 @@ function linkValidate(link) {
   <div class={styles.card_body}>
     <img src={linkValidate(props.image)} alt="" class={styles.img} />
     <p class="card-text">{props.description}</p>
-    <a href={props.url} class="card-link"><button>{props.url}</button></a>
+    <a href=`project/${props.url}` class="card-link"><button>GO!!</button></a>
     {
       props.tech ? (
         <p class="card-text">
