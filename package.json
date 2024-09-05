@@ -16,6 +16,8 @@
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.14.5",
+    "dotenv": "^16.4.5",
+    "groq-sdk": "^0.6.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "validator": "^13.12.0"

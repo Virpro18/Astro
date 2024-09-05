@@ -1,7 +1,10 @@
 ---
 import MainLayouts from "../layouts/MainLayout.astro"
+import FormTest from "../components/client/formTest"
+// import AiCard from "../components/client/AiCard"
 ---
 
 <MainLayouts>
-
+    <FormTest client:load/>
+    <!-- <AiCard client:load/> -->
 </MainLayouts>

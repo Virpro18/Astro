@@ -1,22 +1,44 @@
-import styles from "../../styles/projects_header.module.css"
-interface props {
+import styles from "../../styles/projects_header.module.css";
+import AiCard from "./AiCard.jsx";
+// import { main } from "../../Ai/Groq";
+// main()
+import React, { useState, useEffect } from "react";
+
+interface Props {
   title: string;
 }
-import Arrow from "../../../public/arrow-back.svg"
-const arrow  = "<~~"
 
-export default function ProjectHeader(props:props) {
+const arrow = "<~~";
+
+function ProjectHeader({ title }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      console.log("Open");
+    } else {
+      console.log("Close");
+    }
+  };
+
+
+
   return (
-    <header className={styles.header}>
-      
-      <a href="/"><button className={styles['header-back']}>{arrow}Back</button></a>
-      <h1>{props.title}</h1>
-      <nav className={styles.features_nav}>
-        <button>Create</button>
-        {/* <button>terus</button> */}
-        <button>AI</button>
-      </nav>
-    </header>
+    <>
+      <header className={styles.header}>
+        <a href="/">
+          <button className={styles["header-back"]}>{arrow}Back</button>
+        </a>
+        <h1>{title}</h1>
+        <nav className={styles.features_nav}>
+          <button>Select</button>
+          <button>Create</button>
+          <button onClick={handleClick}>AI</button>
+        </nav>
+      </header>
+      <AiCard />
+    </>
   );
 }
 
+export default ProjectHeader;

@@ -1,22 +1,28 @@
 ---
-import ProjectHeader from "../components/client/ProjectsHeader"
-import "../styles/Main.css"
+import ProjectHeader from "../components/client/ProjectsHeader";
+import "../styles/Main.css";
+
 const CurrentURL = Astro.url.pathname;
 const title = CurrentURL.split("/")[2].toUpperCase();
-console.log(title)
+// console.log(title);
+function TST() {
+  
+}
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <ProjectHeader title={title}/>
+  </head>
+  <body>
+    <ProjectHeader title={title} client:load />
     <slot>
-        <h1>malas</h1>
+      <h1>malas</h1>
     </slot>
-</body>
+    <!-- <button >test</button> -->
+  </body>
 </html>
