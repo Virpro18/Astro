@@ -18,8 +18,8 @@ function TST() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <ProjectHeader title={title} client:load />
+  <body style="min-height:100vh;">
+    <ProjectHeader title={title} transition:name="hero" client:load/>
     <slot>
       <h1>malas</h1>
     </slot>

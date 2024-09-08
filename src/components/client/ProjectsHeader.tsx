@@ -22,7 +22,6 @@ function ProjectHeader({ title }: Props) {
   };
 
 
-
   return (
     <>
       <header className={styles.header}>
@@ -36,7 +35,7 @@ function ProjectHeader({ title }: Props) {
           <button onClick={handleClick}>AI</button>
         </nav>
       </header>
-      <AiCard />
+     {isOpen? <AiCard test={handleClick}/>: ""}
     </>
   );
 }
