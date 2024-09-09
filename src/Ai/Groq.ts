@@ -5,6 +5,7 @@ import text from "./AiSystem.txt?raw"
 console.log(text)
 
 const groq = new Groq({ apiKey: import.meta.env.PUBLIC_GROQ_API_KEY});
+console.log( import.meta.env.PUBLIC_GROQ_API_KEY)
 
 // export async function main() {
 //   const chatCompletion = await getGroqChatCompletion();
