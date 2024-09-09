@@ -10,7 +10,7 @@ function AiCard(props) {
       e.preventDefault();
       const formData = new FormData(e.target as HTMLFormElement);
 
-      const fetchData = await fetch("/api/test", {
+      const fetchData = await fetch("/api/AiAPI", {
         method: "POST",
         body: formData,
       });
