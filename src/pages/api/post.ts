@@ -8,6 +8,7 @@ export const POST: APIRoute = async ({ request }) => {
     const name = data.get("name");
     const email = data.get("email");
   const messages = data.get("message");
+  const prompt = data.get("prompt")
   // Validate the data - you'll probably want to do more than this
   if (!name || !email || !messages) {
     return new Response(
@@ -25,6 +26,7 @@ export const POST: APIRoute = async ({ request }) => {
           name,
           email,
           messages,
+          prompt,
           message: "Thank you for your message!",
         }
       ]
