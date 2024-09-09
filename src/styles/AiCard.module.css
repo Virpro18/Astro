@@ -8,19 +8,51 @@
   display: grid;
   place-items: center;  
   background-color: #49494957;
+  transition: all .3s ease-out;
 }
 .cardWrapper {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: antiquewhite;
+  max-width: 97%;
   width: 97%;
   height: 95%;
   display:flex;
   flex-direction: column;
+  position: relative;
   /* align-items: center; */ 
   /* justify-content: center; */
   padding: 1rem;
 }
 .cardHeader {
   text-align: center;
+}
+.cardBody {
+  margin-top: 1rem;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.aiRespond {
+  height: 95%;
+  /* max-width: 100%; */
+  max-width: 97%;
+  max-height: 95%;
+  text-wrap: wrap;
+  overflow: auto;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.closeButton {
+  width: 1.5rem;
+  height: 1.5rem;
 }

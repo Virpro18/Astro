@@ -25,10 +25,12 @@ function ProjectHeader({ title }: Props) {
   return (
     <>
       <header className={styles.header}>
+        <div className={styles.responsiveWrapper}>
         <a href="/">
           <button className={styles["header-back"]}>{arrow}Back</button>
         </a>
         <h1>{title}</h1>
+        </div>
         <nav className={styles.features_nav}>
           <button>Select</button>
           <button>Create</button>
