@@ -16,7 +16,7 @@ export const POST: APIRoute = async ({ params, request }) => {
         {
           message: "test",
           data: prompt,
-          response: (await getGroqChatCompletion(prompt)).choices[0].message.content,
+          // response: (await getGroqChatCompletion(prompt)).choices[0].message.content,
         },
     }),
     { status: 200 }
